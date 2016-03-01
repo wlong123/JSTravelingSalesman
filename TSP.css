@@ -1,0 +1,41 @@
+body {
+	background-color:#FFF;
+}
+
+#button1 {
+	background-color:#77F;
+	width:100px;
+}
+
+#button2 {
+	background-color:#77F;
+	width:100px;
+}
+
+#button3 {
+	background-color:#555;
+	width:100px;
+}
+
+#button4 {
+	background-color:#555;
+	width:100px;
+}
+
+
+.listElement {
+	background-color:#77F;
+	width:100px;
+	border:1px solid #22A;
+}
+
+#canvas{
+	width:600px;
+	height:600px;
+	background-color:#167167;
+
+#canvas2{
+	width:600px;
+	height:600px;
+	background-color:#233212;
+}
