@@ -1,3 +1,9 @@
+/**
+	Will Long
+	3/1/16
+	Traveling Salesman Problem CSS
+	Version 1.0
+*/
 body {
 	background-color:#FFF;
 }
@@ -27,15 +33,4 @@ body {
 	background-color:#77F;
 	width:100px;
 	border:1px solid #22A;
-}
-
-#canvas{
-	width:600px;
-	height:600px;
-	background-color:#167167;
-
-#canvas2{
-	width:600px;
-	height:600px;
-	background-color:#233212;
 }
