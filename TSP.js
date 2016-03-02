@@ -106,8 +106,8 @@ $(document).ready( function() {
 			{
 				tempx = newx.slice(0); //copy of array 
 				tempy = newy.slice(0);
-				tempx.splice(y, 0, xpoints[y]); //adds points to temporary arrays to see what resultant tour length will be
-				tempy.splice(y, 0, ypoints[y]);
+				tempx.splice(y, 0, xpoints[x]); //adds points to temporary arrays to see what resultant tour length will be
+				tempy.splice(y, 0, ypoints[x]);
 				var length = tourLength(tempx, tempy);
 				if(length < shortest)
 				{
