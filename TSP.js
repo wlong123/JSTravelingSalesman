@@ -21,19 +21,6 @@ $(document).ready( function() {
 	ctx2.canvas.width = 400;
 	ctx2.canvas.height = 300;
 	
-	//manually adds points to list
-	$("#button1").click( function() {
-		var x1 = $('#x1').val(); //inputted x value
-		var y1 = $('#y1').val(); //inputted y value
-		$newName = $("<div class=\"listElement\">" + x1 + ", " + y1 + "</div>");
-		$("#list").append($newName);
-		//adds points to list and puts dot on canvas
-		xpoints.push(x1);  
-		ypoints.push(y1);
-		ctx.fillRect(x1,y1,2,2); //puts 2x2 pixel dot on screen
-		ctx2.fillRect(x1,y1,2,2);
-	});	
-	
 	//generates 100 random points
 	$("#button4").click( function() {
 		for(var i = 0; i < 500; i++)
@@ -49,10 +36,19 @@ $(document).ready( function() {
 	
 	});
 	
+	//when you click the canvas a point will show up on both canvases
 	$("#canvas").click(function() {
 		canvas = $("#canvas").get(0);
 		ctx = canvas.getContext("2d");
-		//event.x and event.y canvas.offsetTop canvas.offsetLeft
+		ctx.fillRect(event.x-canvas.offsetLeft - 1,event.y-canvas.offsetTop - 1,2,2);
+		
+		canvas2 = $("#canvas2").get(0);
+		ctx2 = canvas2.getContext("2d");
+		ctx2.fillRect(event.x-canvas.offsetLeft - 1,event.y-canvas.offsetTop - 1,2,2);
+		
+		xpoints.push(event.x-canvas.offsetLeft - 1);
+		ypoints.push(event.y-canvas.offsetTop - 1);
+
 	});
 	
 	//runs nearest neighbor algorithm and draws graph
